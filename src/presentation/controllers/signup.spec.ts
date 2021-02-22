@@ -6,7 +6,7 @@ const makeSut = (): SignUpController => {
 }
 
 describe('SignUp Controller', () => {
-  test('Should retorn 400 if no name is provided', () => {
+  test('Should return 400 if no name is provided', () => {
     const sut = makeSut()
 
     const httpRequest = {
@@ -22,7 +22,7 @@ describe('SignUp Controller', () => {
     expect(httpResponse.body).toEqual(new MissingParamError('name'))
   })
 
-  test('Should retorn 400 if no email is provided', () => {
+  test('Should return 400 if no email is provided', () => {
     const sut = makeSut()
 
     const httpRequest = {
@@ -38,7 +38,7 @@ describe('SignUp Controller', () => {
     expect(httpResponse.body).toEqual(new MissingParamError('email'))
   })
 
-  test('Should retorn 400 if no password is provided', () => {
+  test('Should return 400 if no password is provided', () => {
     const sut = makeSut()
 
     const httpRequest = {
@@ -54,7 +54,7 @@ describe('SignUp Controller', () => {
     expect(httpResponse.body).toEqual(new MissingParamError('password'))
   })
 
-  test('Should retorn 400 if no passwordConfirmation is provided', () => {
+  test('Should return 400 if no passwordConfirmation is provided', () => {
     const sut = makeSut()
 
     const httpRequest = {
